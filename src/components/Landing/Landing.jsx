@@ -5,7 +5,7 @@ import './Landing.css';
 class Landing extends Component {
   render() {
     return (
-      <div id="Landing">
+      <div id="Home">
         <section className="hero is-large">
           <div className="hero-body">
             <div className="container">
@@ -17,8 +17,12 @@ class Landing extends Component {
                 {about.shortDesc}
               </h2>
 
-              <div className="quickLinks">
-                <a className="button" href="#projects">
+              <div className="field is-grouped">
+                <a
+                  className="button"
+                  href="#projects"
+                  style={{ marginRight: '0.5rem' }}
+                >
                   Projects
                 </a>
                 <a
@@ -26,7 +30,6 @@ class Landing extends Component {
                   href="/resume"
                   target="_blank"
                   rel="noopener noreferrer"
-                  content="Resume"
                 >
                   Resume
                 </a>
