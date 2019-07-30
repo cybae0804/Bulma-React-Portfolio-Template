@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { about } from '../../configs';
-import './Landing.css';
+import './Home.css';
 
-class Landing extends Component {
+class Home extends Component {
   render() {
     return (
       <div id="Home">
-        <section className="hero is-large">
+        <section className="hero is-large is-fullheight-with-navbar">
           <div className="hero-body">
             <div className="container">
 
@@ -43,4 +43,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+export default Home;

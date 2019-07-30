@@ -32,7 +32,7 @@ class NavBar extends Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent is-fixed-top"
+        className="navbar is-link is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Landing from '../Landing/Landing.jsx';
-import AboutMe from '../AboutMe/AboutMe.jsx';
+import Home from '../Home/Home.jsx';
+import AboutMe from '../About/About.jsx';
 import Contact from '../Contact/Contact.jsx';
 import Projects from '../Projects/Projects.jsx';
 import Skills from '../Skills/Skills.jsx';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Landing />
+      <Home />
       <AboutMe />
       <Projects />
       <Skills />
