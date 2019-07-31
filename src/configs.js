@@ -19,18 +19,21 @@ const about = {
 const projects = [
   {
     name: 'Calculator',
-    desc: 'State Machine Calculator',
-    path: '',
+    desc: 'jQuery calculator that utilizes state machine logic to efficently perform advanced tasks',
+    demo: '',
+    source: '',
   },
   {
-    name: '',
-    desc: '',
-    path: '',
+    name: 'Student Grade Table',
+    desc: 'React + Firebase website with CRUD functionalities',
+    demo: '',
+    source: '',
   },
   {
-    name: '',
-    desc: '',
-    path: '',
+    name: 'When In Rome',
+    desc: 'React and Node social media website for finding events around the world',
+    demo: '',
+    source: '',
   },
 ];
 

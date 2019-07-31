@@ -1,4 +1,11 @@
 #Home {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: calc(100vh - 52px);
+}
+
+#Home .decorations {
+  position: absolute;
+  top: -25vh;
+  left: 45vh;
+  z-index: -1;
 }
