@@ -37,11 +37,54 @@ const projects = [
   },
 ];
 
-const skills = [
-  'HTML5', 'CSS3', 'Javascript', 'jQuery',
-  'MySQL', 'Express', 'React', 'Node',
-  'AWS', 'PHP', 'Bootstrap', 'Git',
-]
+const skills = [{
+    skill: 'HTML5',
+    link: 'https://cdn.svgporn.com/logos/html-5.svg',
+  },
+  {
+    skill: 'CSS3',
+    link: 'https://cdn.svgporn.com/logos/css-3.svg',
+  },
+  {
+    skill: 'Javascript',
+    link: 'https://cdn.svgporn.com/logos/javascript.svg',
+  },
+  {
+    skill: 'jQuery',
+    link: 'https://cdn.svgporn.com/logos/jquery.svg',
+  },
+  {
+    skill: 'MySQL',
+    link: 'https://cdn.svgporn.com/logos/mysql.svg',
+  },
+  {
+    skill: 'Express',
+    link: 'https://cdn.svgporn.com/logos/express.svg',
+  },
+  {
+    skill: 'React',
+    link: 'https://cdn.svgporn.com/logos/react.svg',
+  },
+  {
+    skill: 'Node',
+    link: 'https://cdn.svgporn.com/logos/nodejs.svg',
+  },
+  {
+    skill: 'AWS',
+    link: 'https://cdn.svgporn.com/logos/aws.svg',
+  },
+  {
+    skill: 'PHP',
+    link: 'https://cdn.svgporn.com/logos/php.svg',
+  },
+  {
+    skill: 'Bootstrap',
+    link: 'https://cdn.svgporn.com/logos/bootstrap.svg',
+  },
+  {
+    skill: 'Git',
+    link: 'https://cdn.svgporn.com/logos/git-icon.svg',
+  }];
 
 export default {
   colors, about, projects, skills

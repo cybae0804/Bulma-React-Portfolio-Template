@@ -1,0 +1,19 @@
+#Skills {
+  text-align: center;
+  background-color: #f1ece9;
+}
+
+#Skills .imageWrapper {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+#Skills .skillBox {
+  min-height: 250px;
+}
+
+#Skills .image {
+  width: 100px;;
+  height: auto;
+}

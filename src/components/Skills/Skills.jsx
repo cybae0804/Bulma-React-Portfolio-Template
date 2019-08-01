@@ -1,6 +1,44 @@
 import React, { Component } from 'react';
+import { skills } from '../../configs';
+import './Skills.css';
 
 class Skills extends Component {
+  generateSkillsGrid() {
+    const rows = [];
+
+    for (let i = 0; i < skills.length; i += 4) {
+      rows.push(<div className="columns">
+        {
+          (() => {
+            const columns = [];
+
+            for (let j = i; j < i + 4; j++) {
+              if (skills[j]) {
+                columns.push(<div className="column skillBox">
+                  <div className="imageWrapper">
+                    <img
+                      className="image"
+                      src={skills[j].link}
+                      alt="skill"
+                    />
+                  </div>
+
+                  <div className="subtitle">
+                    {skills[j].skill}
+                  </div>
+                </div>);
+              }
+            }
+
+            return columns;
+          })()
+        }
+      </div>)
+    }
+
+    return rows;
+  }
+
   render() {
     return (
       <div id="Skills">
@@ -9,7 +47,7 @@ class Skills extends Component {
             <div className="container">
               <h1 className="title">Skills</h1>
               <div className="content">
-                Skills
+                {this.generateSkillsGrid()}
               </div>
             </div>
           </div>
