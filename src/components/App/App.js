@@ -1,11 +1,12 @@
 import React from 'react';
 
-import Home from '../Home/Home.jsx';
-import AboutMe from '../About/About.jsx';
-import Contact from '../Contact/Contact.jsx';
-import Projects from '../Projects/Projects.jsx';
-import Skills from '../Skills/Skills.jsx';
-import NavBar from '../NavBar/NavBar.jsx';
+import NavBar from '../NavBar/NavBar';
+import Home from '../Home/Home';
+import AboutMe from '../About/About';
+import Contact from '../Contact/Contact';
+import Projects from '../Projects/Projects';
+import Skills from '../Skills/Skills';
+import Footer from '../Footer/Footer'
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   );
 }
