@@ -1,0 +1,8 @@
+#ContactForm {
+  text-align: left;
+}
+
+#ContactForm .buttonWrapper {
+  margin-top: 1rem;
+  text-align: right;
+}

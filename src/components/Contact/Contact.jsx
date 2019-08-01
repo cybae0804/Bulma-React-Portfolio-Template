@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ContactForm from './ContactForm/ContactForm';
+import { about } from '../../configs';
 import './Contact.css';
 
 class Contact extends Component {
@@ -8,9 +10,9 @@ class Contact extends Component {
         <section className="hero">
           <div className="hero-body">
             <div className="container">
-              <h1 className="title">Contact</h1>
+              <h1 className="title">{`Contact ${about.firstName}`} </h1>
               <div className="content">
-                Contact
+                <ContactForm />
               </div>
             </div>
           </div>
