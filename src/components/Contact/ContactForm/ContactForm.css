@@ -6,3 +6,7 @@
   margin-top: 1rem;
   text-align: right;
 }
+
+#ContactForm .preserveWhiteSpace {
+  white-space: pre;
+}

@@ -3,15 +3,142 @@ import './ContactForm.css';
 
 class ContactForm extends Component {
   state = {
-    sender: '',
-    email: '',
-    title: '',
-    message: '',
+    sender: {
+      value: '',
+      errorMessage: '',
+    },
+    email: {
+      value: '',
+      errorMessage: '',
+    },
+    title: {
+      value: '',
+      errorMessage: '',
+    },
+    message: {
+      value: '',
+      errorMessage: '',
+    },
+  };
+
+  handleInput = (e) => {
+    const { name, value } = e.target;
+
+    this.setState(prevState => ({
+      [name]: {
+        ...prevState[name],
+        value,
+      }
+    }));
+  }
+
+  validate = () => {
+    let validFlag = true;
+
+    if (this.state.sender.value.trim() === '') {
+      this.setState(prevState => ({
+        sender: {
+          value: prevState.sender.value.trim(),
+          errorMessage: 'This field is required.'
+        }
+      }));
+
+      validFlag = false;
+    } else if (!/^[a-zA-Z ]{2,30}$/.test(this.state.sender.value.trim())) {
+      this.setState(prevState => ({
+        sender: {
+          ...prevState.sender,
+          errorMessage: 'Name must comprise of alphabets.'
+        }
+      }));
+
+      validFlag = false;
+    } else {
+      this.setState(prevState => ({
+        sender: {
+          ...prevState.sender,
+          errorMessage: ''
+        }
+      }));
+    }
+
+    if (this.state.email.value.trim() === '') {
+      this.setState(prevState => ({
+        email: {
+          value: prevState.email.value.trim(),
+          errorMessage: 'This field is required.'
+        }
+      }));
+
+      validFlag = false;
+    } else if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.state.email.value.trim())) {
+      this.setState(prevState => ({
+        email: {
+          ...prevState.email,
+          errorMessage: 'Please format your email correctly.'
+        }
+      }));
+
+      validFlag = false;
+    } else {
+      this.setState(prevState => ({
+        email: {
+          ...prevState.email,
+          errorMessage: ''
+        }
+      }));
+    }
+
+    if (this.state.title.value.trim() === '') {
+      this.setState(prevState => ({
+        title: {
+          value: prevState.title.value.trim(),
+          errorMessage: 'This field is required.'
+        }
+      }));
+
+      validFlag = false;
+    } else {
+      this.setState(prevState => ({
+        title: {
+          ...prevState.title,
+          errorMessage: ''
+        }
+      }));
+    }
+
+    if (this.state.message.value.trim() === '') {
+      this.setState(prevState => ({
+        message: {
+          value: prevState.message.value.trim(),
+          errorMessage: 'This field is required.'
+        }
+      }));
+
+      validFlag = false;
+    } else {
+      this.setState(prevState => ({
+        message: {
+          ...prevState.message,
+          errorMessage: ''
+        }
+      }));
+    }
+
+    return validFlag;
+  }
+
+  send = (e) => {
+    e.preventDefault();
+
+    if (this.validate()) {
+      // send email here;
+    }
   }
 
   render() {
     return (
-      <form id="ContactForm">
+      <form id="ContactForm" onSubmit={this.send}>
         <div className="columns">
           <div className="column">
             <div className="field">
@@ -20,14 +147,25 @@ class ContactForm extends Component {
               </label>
               <div className="control has-icons-left has-icons-right">
                 <input
-                  className="input"
+                  className={`input ${this.state.sender.errorMessage && 'is-danger'}`}
                   type="text"
                   placeholder="John Smith"
+                  onChange={this.handleInput}
+                  name="sender"
+                  value={this.state.sender.value}
                 />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
+                <span className="icon is-small is-left">
+                  <i className="fas fa-user"></i>
                 </span>
+                {
+                  this.state.sender.errorMessage ? <span className="icon is-small is-right">
+                    <i className="fas fa-exclamation-triangle"></i>
+                  </span> : null
+                }
               </div>
+              <p className="help is-danger preserveWhiteSpace">
+                {this.state.sender.errorMessage || ' '}
+              </p>
             </div>
           </div>
           <div className="column">
@@ -37,14 +175,25 @@ class ContactForm extends Component {
               </label>
               <div className="control has-icons-left has-icons-right">
                 <input
-                  className="input"
+                  className={`input ${this.state.email.errorMessage && 'is-danger'}`}
                   type="text"
                   placeholder="jSmith@email.com"
+                  onChange={this.handleInput}
+                  name="email"
+                  value={this.state.email.value}
                 />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
+                <span className="icon is-small is-left">
+                  <i className="fas fa-envelope"></i>
                 </span>
+                {
+                  this.state.email.errorMessage ? <span className="icon is-small is-right">
+                    <i className="fas fa-exclamation-triangle"></i>
+                  </span> : null
+                }
               </div>
+              <p className="help is-danger preserveWhiteSpace">
+                {this.state.email.errorMessage || ' '}
+              </p>
             </div>
           </div>
           <div className="column">
@@ -54,14 +203,25 @@ class ContactForm extends Component {
               </label>
               <div className="control has-icons-left has-icons-right">
                 <input
-                  className="input"
+                  className={`input ${this.state.title.errorMessage && 'is-danger'}`}
                   type="text"
                   placeholder="Hi John"
+                  onChange={this.handleInput}
+                  name="title"
+                  value={this.state.title.value}
                 />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-comments"></i>
+                <span className="icon is-small is-left">
+                  <i className="fas fa-comments"></i>
                 </span>
+                {
+                  this.state.title.errorMessage ? <span className="icon is-small is-right">
+                    <i className="fas fa-exclamation-triangle"></i>
+                  </span> : null
+                }
               </div>
+              <p className="help is-danger preserveWhiteSpace">
+                {this.state.title.errorMessage || ' '}
+              </p>
             </div>
           </div>
         </div>
@@ -72,15 +232,21 @@ class ContactForm extends Component {
             </label>
             <div className="control">
               <textarea
-                className="textarea"
+                className={`textarea ${this.state.message.errorMessage && 'is-danger'}`}
                 type="text"
                 placeholder="Your Message"
+                onChange={this.handleInput}
+                name="message"
+                value={this.state.message.value}
               />
             </div>
+            <p className="help is-danger preserveWhiteSpace">
+              {this.state.message.errorMessage || ' '}
+            </p>
           </div>
         </div>
         <div className="buttonWrapper">
-          <button className="button is-link">
+          <button className="button is-link" onClick={this.send}>
             Send
           </button>
         </div>

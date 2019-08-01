@@ -7,14 +7,14 @@ class Skills extends Component {
     const rows = [];
 
     for (let i = 0; i < skills.length; i += 4) {
-      rows.push(<div className="columns">
+      rows.push(<div className="columns" key={i}>
         {
           (() => {
             const columns = [];
 
             for (let j = i; j < i + 4; j++) {
               if (skills[j]) {
-                columns.push(<div className="column skillBox">
+                columns.push(<div className="column skillBox" key={skills[j].skill}>
                   <div className="imageWrapper">
                     <img
                       className="image"
