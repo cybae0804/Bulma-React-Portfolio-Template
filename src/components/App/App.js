@@ -5,8 +5,7 @@ import AboutMe from '../About/About.jsx';
 import Contact from '../Contact/Contact.jsx';
 import Projects from '../Projects/Projects.jsx';
 import Skills from '../Skills/Skills.jsx';
-
-import NavBar from '../shared/NavBar/NavBar.jsx';
+import NavBar from '../NavBar/NavBar.jsx';
 
 import './App.css';
 
