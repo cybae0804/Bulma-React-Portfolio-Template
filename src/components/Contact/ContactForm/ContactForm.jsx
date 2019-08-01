@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as emailjs from 'emailjs-com';
 import './ContactForm.css';
 
 class ContactForm extends Component {
@@ -19,6 +20,7 @@ class ContactForm extends Component {
       value: '',
       errorMessage: '',
     },
+    response: '',
   };
 
   handleInput = (e) => {
@@ -128,11 +130,26 @@ class ContactForm extends Component {
     return validFlag;
   }
 
-  send = (e) => {
+  send = async (e) => {
     e.preventDefault();
 
     if (this.validate()) {
-      // send email here;
+      try {
+        const { status } = await emailjs.send('YOUR SERVICE ID','YOUR TEMPLATE ID', {
+          from_name: this.state.sender.value,
+          reply_to: this.state.email.value,
+          title: this.state.title.value,
+          message: this.state.message.value,
+        }, 'YOUR UESR ID');
+
+        if (status === 200) {
+          this.setState({ response: `Thank you! I'll get back to you ASAP.`});
+        } else {
+          throw new Error();
+        }
+      } catch(e) {
+        this.setState({ response: `Something went wrong. Please try again.`});
+      }
     }
   }
 
@@ -246,7 +263,8 @@ class ContactForm extends Component {
           </div>
         </div>
         <div className="buttonWrapper">
-          <button className="button is-link" onClick={this.send}>
+          <span className="responseMessage">{this.state.response}</span>
+          <button className="button is-link verticalAlignMiddle" onClick={this.send}>
             Send
           </button>
         </div>

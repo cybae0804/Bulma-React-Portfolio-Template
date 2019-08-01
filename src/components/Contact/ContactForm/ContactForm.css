@@ -10,3 +10,11 @@
 #ContactForm .preserveWhiteSpace {
   white-space: pre;
 }
+
+#ContactForm .responseMessage {
+  margin-right: 1rem;
+}
+
+#ContactForm .verticalAlignMiddle {
+  vertical-align: middle;
+}
