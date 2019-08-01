@@ -14,6 +14,8 @@ const about = {
     'Now that I have graduated, I am looking for opportunities where I can use what I’ve learned in both college and the bootcamp to solve interesting yet practical problems. I’m eager to continue learning through the work that I do and the new challenges I’ll face every day.'
   ],
   email: 'hello@cybae.me',
+  github: 'https://github.com',
+  linkedIn: 'https://linkedin.com',
 };
 
 const projects = [
