@@ -1,26 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
+import Scroll from 'react-scroll';
 
 const NavBarItems = [
   {
     text: 'Home',
-    href: '#Home',
   },
   {
     text: 'About',
-    href: '#About',
-  },
-  {
-    text: 'Skills',
-    href: '#Skills',
   },
   {
     text: 'Projects',
-    href: '#Projects',
+  },
+  {
+    text: 'Skills',
   },
   {
     text: 'Contact',
-    href: '#Contact',
   }
 ];
 
@@ -56,7 +52,14 @@ class NavBar extends Component {
               NavBarItems.map(item => (<a
                 key={item.text}
                 className="navbar-item"
-                href={item.href}
+                onClick={() => {
+                  Scroll.scroller.scrollTo(item.text, {
+                    duration: 500,
+                    delay: 100,
+                    smooth: true,
+                    offset: -52,
+                  });
+                }}
               >
                 {item.text}
               </a>))
