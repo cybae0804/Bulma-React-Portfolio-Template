@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Scroll from 'react-scroll';
 import { about } from '../../configs';
 import './Footer.css';
 
@@ -35,6 +36,16 @@ class Footer extends Component {
             </span>
           </a>
         </div>
+        <button
+          className="button is-link scrollToTopBtn"
+          onClick={() => {
+            Scroll.animateScroll.scrollToTop();
+          }}
+        >
+          <span className="icon is-small">
+            <i className="fas fa-arrow-up"></i>
+          </span>
+        </button>
       </div>
     );
   }

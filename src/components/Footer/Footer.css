@@ -5,8 +5,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #Footer .colorWhite {
   color: white !important;
+}
+
+#Footer .scrollToTopBtn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
