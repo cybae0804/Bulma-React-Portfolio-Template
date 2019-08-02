@@ -38,6 +38,14 @@ After running npm build, create a 'projects' folder in the build folder, then cr
 
 ex. build/projects/calculator/index.html
 
+For deploying react projects inside the portfolio, there's a special configuration needed. Before building the project app, add below line to the package.json file.
+
+* "homepage": "https://YOUR_DEPLOYMENT_LINK.com/YOUR_PROJECT_FOLDER"
+
+This will allow the nested react build to open properly by referring to homepage as its root.
+
+Refer to [this](https://facebook.github.io/create-react-app/docs/deployment#building-for-relative-paths) React documentation for more detailed info.
+
 ### Resume
 
 After running npm build, drop resume.pdf in the folder before deploying.
