@@ -1,4 +1,4 @@
-# Bulma Portfolio Template
+# Bulma React Portfolio Template
 
 This is a React portfolio template that is 
 
