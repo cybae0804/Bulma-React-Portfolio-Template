@@ -16,6 +16,26 @@ class Projects extends Component {
           <div className="mCard-content">
             <p>{desc}</p>
           </div>
+          <div className="mCard-action iconsContainer">
+            <a
+              href={project.source}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="icon is-large">
+                <i className="fab fa-github fa-lg colorBlack"></i>
+              </span>
+            </a>
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="icon is-large">
+                <i className="fas fa-laptop-code fa-lg colorBlack" ></i>            
+              </span>
+            </a>
+          </div>
         </div>
       </div>);
     })

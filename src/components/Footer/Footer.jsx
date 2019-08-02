@@ -18,7 +18,7 @@ class Footer extends Component {
             </span>
           </a>
           <a
-            href={about.linkedin}
+            href={about.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
           >
