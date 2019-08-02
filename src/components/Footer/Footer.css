@@ -8,10 +8,6 @@
   position: relative;
 }
 
-#Footer .colorWhite {
-  color: white !important;
-}
-
 #Footer .scrollToTopBtn {
   position: absolute;
   right: 1rem;

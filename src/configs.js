@@ -5,15 +5,15 @@ const colors = {
 };
 
 const about = {
-  firstName: 'Cy',
-  lastName: 'Bae',
+  firstName: 'John',
+  lastName: 'Smith',
   shortDesc: `I'm a web developer located in Irvine, CA.`,
   longDesc: [
-    'One of my biggest entertainments as I was growing up was video games, and in a sense, video games teach you a lot about problem solving and logical thinking. Eventually, it led me to studying statistics and computer science in college: two disciplines that requires analytical and logical mindset. While I was in school, I worked as a student tech support where I learned to communicate difficult technology effectively, but also exposed me to many different everyday technology.',
-    `After my graduation, I began working on a personal backend project that really reminded me of how much I love development. My college curriculum didn't cover many web development technologies and as a result I decided that I would further my education before starting my career. I did my research and decided to immerse myself in LearningFuze coding bootcamp, because it provided me structured guidance and professional connections. During the course of the bootcamp, I spent over 12 hours a day solidifying my foundation in html, css, and javascript. Moreover, I’ve worked on my solo projects such as my state machine calculator, but also participated in hackathons.`,
-    'Now that I have graduated, I am looking for opportunities where I can use what I’ve learned in both college and the bootcamp to solve interesting yet practical problems. I’m eager to continue learning through the work that I do and the new challenges I’ll face every day.'
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Est placerat in egestas erat imperdiet sed euismod nisi. Tincidunt praesent semper feugiat nibh. Facilisis sed odio morbi quis commodo odio aenean sed. Sit amet venenatis urna cursus eget nunc scelerisque. Pulvinar mattis nunc sed blandit libero volutpat. Elementum facilisis leo vel fringilla est. Adipiscing vitae proin sagittis nisl. Erat imperdiet sed euismod nisi porta lorem mollis. Pellentesque eu tincidunt tortor aliquam nulla. Eget nulla facilisi etiam dignissim diam.',
+    'Sed felis eget velit aliquet sagittis id. Nunc sed blandit libero volutpat sed cras ornare arcu dui. Morbi enim nunc faucibus a pellentesque sit. Pellentesque dignissim enim sit amet venenatis urna cursus eget. Eu tincidunt tortor aliquam nulla facilisi cras fermentum. Feugiat nibh sed pulvinar proin gravida. Erat nam at lectus urna duis convallis. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Viverra mauris in aliquam sem fringilla ut. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Ut tellus elementum sagittis vitae et leo duis ut diam.',
+    'Elementum facilisis leo vel fringilla est. Adipiscing vitae proin sagittis nisl. Erat imperdiet sed euismod nisi porta lorem mollis. Pellentesque eu tincidunt tortor aliquam nulla. Eget nulla facilisi etiam dignissim diam.'
   ],
-  email: 'hello@cybae.me',
+  email: '',
   github: 'https://github.com',
   linkedIn: 'https://linkedin.com',
 };

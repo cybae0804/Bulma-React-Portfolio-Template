@@ -8,19 +8,13 @@ class Projects extends Component {
       const { name, desc } = project;
 
       return (<div className="column" key={index} >
-        <div className="card">
-          <div className="card-image">
-            <img src={'https://picsum.photos/800/600'} alt="Placeholder" />
+        <div className="mCard shadow">
+          <div className="mCard-image">
+            <img src="https://picsum.photos/400/410" alt="nature"/>
+            <span className="mCard-title">{name}</span>
           </div>
-          <div className="card-header">
-            <div className="card-header-title">
-              {name}
-            </div>
-          </div>
-          <div className="card-content">
-            <div className="content">
-              {desc}
-            </div>
+          <div class="mCard-content">
+            <p>{desc}</p>
           </div>
         </div>
       </div>);
@@ -30,6 +24,7 @@ class Projects extends Component {
   render() {
     return (
       <div id="Projects">
+
         <section className="hero">
           <div className="hero-body">
             <div className="container">

@@ -8,8 +8,6 @@ import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 import Footer from '../Footer/Footer'
 
-import './App.css';
-
 function App() {
   return (
     <div className="App">

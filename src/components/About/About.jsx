@@ -13,7 +13,11 @@ class About extends Component {
               <h1 className="title">{`About ${about.firstName}`}</h1>
               <div className="content columns">
                 <div className="column">
-                  <img src="https://picsum.photos/600/500" alt="Profile" />
+                  <img
+                    src="https://picsum.photos/600/500"
+                    alt="Profile"
+                    className="aboutImage shadow"
+                  />
                 </div>
                 <div className="column longDescription">
                   {
