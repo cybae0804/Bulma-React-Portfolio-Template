@@ -13,7 +13,7 @@ class Projects extends Component {
             <img src="https://picsum.photos/400/410" alt="nature"/>
             <span className="mCard-title">{name}</span>
           </div>
-          <div class="mCard-content">
+          <div className="mCard-content">
             <p>{desc}</p>
           </div>
         </div>
@@ -24,7 +24,6 @@ class Projects extends Component {
   render() {
     return (
       <div id="Projects">
-
         <section className="hero">
           <div className="hero-body">
             <div className="container">
