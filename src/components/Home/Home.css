@@ -1,5 +1,5 @@
 #Home {
-  min-width: 100vw;
+  width: 100vw;
   min-height: calc(100vh - 52px);
 }
 
@@ -8,4 +8,11 @@
   top: -25vh;
   left: 45vh;
   z-index: -1;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  #Home .decorations {
+    display: none;
+  }
 }
