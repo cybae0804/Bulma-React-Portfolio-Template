@@ -1,5 +1,9 @@
 # Bulma React Portfolio Template
 
+[Demo](https://bulma-react-portfolio-template.web.app/)
+
+![Preview](https://i.imgur.com/3EgtDNN.png)
+
 This is a React portfolio template that is 
 
 1. Mobile Responsive
@@ -16,7 +20,7 @@ The idea is to build this, add additional files (resume, other projects) into th
 
 - [Bulma](https://bulma.io/) CSS for columns, buttons, forms, navbar.
 
-- [Anime.js](https://animejs.com/) for decorations
+- [emailJS](https://www.emailjs.com/) for client-only side emailing.
 
 - [React Scroller](https://www.npmjs.com/package/react-scroll) for smooth scrolling.
 
@@ -39,6 +43,22 @@ ex. build/projects/calculator/index.html
 After running npm build, drop resume.pdf in the folder before deploying.
 
 If you want to structure the folders differently, feel free to change up the <a> tags in the template respectively.
+
+### Contact/Email
+
+1. Make an account at [emailJS](https://www.emailjs.com/). 
+
+2. Add your email provider (ex. Gmail) on the email services tab. Keep the Service ID.
+
+3. Modify the example email template to include {{title}} {{from_name}} {{reply_to}} {{message}}. Grab the Template ID.
+
+![Example](https://i.imgur.com/gPW6jh0.png)
+
+4. Go to your account tab, and grab the User ID.
+
+5. In src/components/Contact/ContactForm/ContactForm.jsx, modify the 'send' function to include your service id, template id, and user id.
+
+* The email sent through this form will show up as sent from yourself. You have to look into the reply_to dropdown to see who sent it and manually reply.
 
 ### Deploying
 
