@@ -4,9 +4,6 @@
 }
 
 #Home .decorations {
-  /* position: absolute;
-  top: -25vh;
-  left: 45vh; */
   z-index: -1;
   overflow: hidden;
 }

@@ -1,6 +1,6 @@
 # Bulma React Portfolio Template
 
-[Demo](https://bulma-react-portfolio-template.web.app/)
+[Demo](https://bulma-react-portfolio-template.netlify.app/)
 
 ![Preview](https://i.imgur.com/3EgtDNN.png)
 
