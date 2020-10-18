@@ -209,3 +209,10 @@
   cursor: pointer;
   display: block;
 }
+
+.cardOverride {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
+}

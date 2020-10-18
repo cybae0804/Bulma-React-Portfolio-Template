@@ -12,7 +12,7 @@ This is a React portfolio template that is
 
 3. Minimal
 
-The idea is to build this, add additional files (resume, other projects) into the build foler, and deploy using Firebase, etc.
+The idea is to build this, add additional files (resume, other projects) into the build foler, and deploy using Netlify, etc.
 
 ## Dependencies
 

@@ -8,10 +8,7 @@ class Projects extends Component {
       const { name, desc, image, demo, source } = project;
 
       return (<div className="column" key={index} >
-        <div
-          className="mCard shadow"
-          style={{ display: 'flex', flexDirection: 'column', flex: '1 1 auto', height: '100%' }}
-        >
+        <div className="mCard shadow cardOverride">
           <div className="mCard-image" style={{ display: 'flex' }}>
             <div
               style={{
@@ -24,10 +21,9 @@ class Projects extends Component {
                 backgroundRepeat: 'no-repeat',
               }}
             />
-            {/* <img src={image} alt={imageAlt}/> */}
             <span className="mCard-title">{name}</span>
           </div>
-          <div className="mCard-content" style={{ flex: '1 1 auto'}}>
+          <div className="mCard-content" style={{ flex: '1 1 auto' }}>
             <p>{desc}</p>
           </div>
           <div className="mCard-action iconsContainer">

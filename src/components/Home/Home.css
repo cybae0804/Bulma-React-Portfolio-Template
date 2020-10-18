@@ -13,3 +13,11 @@
     display: none;
   }
 }
+
+.sectionOverride {
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20%;
+  max-height: calc(100vh - 52px);
+}
