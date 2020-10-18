@@ -5,20 +5,34 @@ import './Projects.css';
 class Projects extends Component {
   generateProjectsPanel = () => {
     return projects.map((project, index) => {
-      const { name, desc } = project;
+      const { name, desc, image, demo, source } = project;
 
       return (<div className="column" key={index} >
-        <div className="mCard shadow">
-          <div className="mCard-image">
-            <img src="https://picsum.photos/400/410" alt="nature"/>
+        <div
+          className="mCard shadow"
+          style={{ display: 'flex', flexDirection: 'column', flex: '1 1 auto', height: '100%' }}
+        >
+          <div className="mCard-image" style={{ display: 'flex' }}>
+            <div
+              style={{
+                flex: '1 1 auto',
+                minWidth: 400,
+                minHeight: 400,
+                backgroundImage: `url(${image}`,
+                backgroundPosition: "center",
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+            {/* <img src={image} alt={imageAlt}/> */}
             <span className="mCard-title">{name}</span>
           </div>
-          <div className="mCard-content">
+          <div className="mCard-content" style={{ flex: '1 1 auto'}}>
             <p>{desc}</p>
           </div>
           <div className="mCard-action iconsContainer">
             <a
-              href={project.source}
+              href={source}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -27,7 +41,7 @@ class Projects extends Component {
               </span>
             </a>
             <a
-              href={project.demo}
+              href={demo}
               target="_blank"
               rel="noopener noreferrer"
             >

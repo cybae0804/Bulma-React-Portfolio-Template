@@ -22,18 +22,21 @@ const projects = [
   {
     name: 'Calculator',
     desc: 'jQuery calculator that utilizes state machine logic to efficently perform advanced tasks',
+    image: 'https://picsum.photos/400/410',
     demo: '',
     source: '',
   },
   {
     name: 'Student Grade Table',
     desc: 'React + Firebase website with CRUD functionalities',
+    image: 'https://picsum.photos/400/410',
     demo: '',
     source: '',
   },
   {
     name: 'When In Rome',
     desc: 'React and Node social media website for finding events around the world',
+    image: 'https://picsum.photos/400/410',
     demo: '',
     source: '',
   },
